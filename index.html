@@ -22,7 +22,6 @@
             <video src="" class="weather-icon"></video>
         </div>
     </div>
-    <button class="btnimran"><a href="https://imranaly07.github.io/search-engine-/">Next</a></button>
     <footer class="footer">&copy; This Website is made by Imran Aly</footer>
 
     <script>
@@ -103,6 +102,14 @@
             // SpeechRecognition API is not supported, provide a fallback or message to the user
             console.error('SpeechRecognition API is not supported in this browser.');
         }
+
+
+        // Event listener for the "keyup" event on the input field
+searchBox.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        checkWeather(searchBox.value);
+    }
+});
     </script>
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
